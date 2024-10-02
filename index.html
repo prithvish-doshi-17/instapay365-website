@@ -3,60 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstaPay365 - Coming Soon</title>
+    <title>Coming Soon - Instapay365</title>
     <style>
         body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
+        }
+        .container {
             text-align: center;
         }
-        h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-        p {
-            font-size: 18px;
-        }
-        form {
+        .button {
             margin-top: 20px;
-        }
-        input[type="email"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-        }
-        input[type="submit"] {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #007bff;
+            padding: 15px 30px;
+            background-color: #0073e6;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+        .thank-you {
+            display: none;
+            font-size: 18px;
+            color: green;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>InstaPay365</h1>
-    <p>Coming Soon!</p>
-    <form id="signup-form">
-        <input type="email" id="email" placeholder="Enter your email" required>
-        <input type="submit" value="Sign Up">
-    </form>
+    <div class="container">
+        <h1>InstaPay365</h1>
+        <h3>Coming Soon!</h3>
+        <p>Be the first to know when we launch.</p>
+        <a id="signupButton" class="button" href="https://forms.gle/rNktAM9qDMZcN8ik9" target="_blank">Sign up for early access</a>
+        <div id="thankYou" class="thank-you">Thank you for signing up!</div>
+    </div>
+
     <script>
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            // Send email to a server or service
-            alert(`Thank you for signing up, ${email}!`);
-            document.getElementById('email').value = ''; // Clear input
+        document.getElementById("signupButton").addEventListener("click", function() {
+            // Display thank you message once the form is submitted
+            setTimeout(function() {
+                document.getElementById("thankYou").style.display = 'block';
+            }, 3000); // Adjust delay as needed for Google Form response time
         });
     </script>
 </body>
