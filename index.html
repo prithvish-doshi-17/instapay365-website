@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instapay365 - Coming Soon</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        input[type="submit"] {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instapay365</h1>
+    <p>Coming Soon!</p>
+    <form id="signup-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            // Send email to a server or service
+            alert(`Thank you for signing up, ${email}!`);
+            document.getElementById('email').value = ''; // Clear input
+        });
+    </script>
+</body>
+</html>
